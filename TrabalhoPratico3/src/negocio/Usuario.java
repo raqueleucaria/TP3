@@ -4,16 +4,19 @@ import java.awt.Image;
 import java.util.Date;
 
 public class Usuario {
-	private int idUsuario;
+	private int idUsuario[];
 	private Date dataCadastramento;
 	private String nome;
 	private String email;
 	private Date dataNascimento;
 	private int cpf;
+	private Telefone telefone;
+	private Pagamento pagamento;
+	private Endereco endereco;
 	//private Image fotoPerfil;
 	//private Image fotoCapa;
 	
-	
+	int numUsuarios;
 	// --------- Metodo construtor ----------
 	public Usuario(int id, Date dc, String n, String e, Date dn, int c) {
 		idUsuario = id;
@@ -26,8 +29,8 @@ public class Usuario {
 	}
 
 	//-------------- metodos ----------------
-		public void cadastrarUsuario() {
-		
+		public void cadastrarUsuario(int numUsuarios) {
+			idUsuario = 
 		}
 		
 		public void editarUsuario() {
