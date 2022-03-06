@@ -13,21 +13,8 @@ public class Telefone {
 	
 	//-------------- metodos ----------------
 	public void cadastrarTel() {
-		int tel;
-		int d = this.getDdd();
-		int n = this.getNumero();
-		
-		
+	
 	}
-	
-	
-	
-	/*public void cadastrarTel() {
-		System.out.println("Cadastrar telefone:");
-		System.out.println("DDD: " + this.getDdd());
-		System.out.println("numero: "+this.getNumero());
-	}
-	*/
 	
 	public void editarTel() {
 		
@@ -54,5 +41,7 @@ public class Telefone {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
+	
+	
 	
 }	
