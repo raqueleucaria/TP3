@@ -4,11 +4,13 @@ public class Carrinho {
 	private double desconto;
 	private String cupom;
 	private double frete;
+	private Produto item; 
 	
-	public Carrinho(double d, String c, double f) {
+	public Carrinho(double d, String c, double f, Produto p) {
 		desconto = d;
 		cupom = c;
 		frete = f;
+		item = p;
 	}
 	
 	//-------------- metodos ----------------
@@ -46,5 +48,15 @@ public class Carrinho {
 	public void setFrete(double frete) {
 		this.frete = frete;
 	}
+
+	public Produto getItem() {
+		return item;
+	}
+
+	public void setItem(Produto item) {
+		this.item = item;
+	}
+	
+	
 	
 }

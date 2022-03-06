@@ -1,14 +1,14 @@
 package negocio;
 
-public class Calca extends Produto{
-	private String modeloCalca;
+public class Vestido extends Produto{
+	private String modeloVestido;
 	
-	public Calca() {
+	public Vestido() {
 		super();
 	}
 	
 	// ---------------- Metodo construtor -------------
-	public Calca (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam, Usuario idC, Usuario idV, String mod) {
+	public Vestido (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam, Usuario idC, Usuario idV, String mod) {
 		nome = n;
 		idProduto = idP;
 		marca = m;
@@ -24,7 +24,7 @@ public class Calca extends Produto{
 		idCliente = idC;
 		idVendedor = idV;
 		
-		modeloCalca = mod;
+		modeloVestido = mod;
 	}
 
 	//---------------Metodos--------------------------
@@ -52,11 +52,11 @@ public class Calca extends Produto{
 	//---------------gets e sets---------------------
 	
 	public String getModeloCalca() {
-		return modeloCalca;
+		return modeloVestido;
 	}
 
 	public void setModeloCalca(String modeloCalca) {
-		this.modeloCalca = modeloCalca;
+		this.modeloVestido = modeloCalca;
 	}
 	
 	
@@ -165,3 +165,4 @@ public class Calca extends Produto{
 		this.idVendedor = idVendedor;
 	}
 }
+

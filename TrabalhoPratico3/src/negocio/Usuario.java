@@ -4,10 +4,11 @@ import java.awt.Image;
 import java.util.Date;
 
 public class Usuario {
-	private int idUsuario[];
+	private int idUsuario;
 	private Date dataCadastramento;
 	private String nome;
 	private String email;
+	private String senha;
 	private Date dataNascimento;
 	private int cpf;
 	private Telefone telefone;
@@ -16,21 +17,23 @@ public class Usuario {
 	//private Image fotoPerfil;
 	//private Image fotoCapa;
 	
-	int numUsuarios;
 	// --------- Metodo construtor ----------
-	public Usuario(int id, Date dc, String n, String e, Date dn, int c) {
+	public Usuario(int id, Date dc, String n, String e, Date dn, int c, Telefone t, Pagamento p, Endereco end) {
 		idUsuario = id;
 		dataCadastramento = dc;
 		nome = n;
 		email = e;
 		dataNascimento = dn;
 		cpf = c;
+		telefone = t;
+		pagamento = p;
+		endereco = end;
 		
 	}
 
 	//-------------- metodos ----------------
-		public void cadastrarUsuario(int numUsuarios) {
-			idUsuario = 
+		public void cadastrarUsuario() {
+			
 		}
 		
 		public void editarUsuario() {
@@ -105,6 +108,41 @@ public class Usuario {
 	public void setCpf(int cpf) {
 		this.cpf = cpf;
 	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public Telefone getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(Telefone telefone) {
+		this.telefone = telefone;
+	}
+
+	public Pagamento getPagamento() {
+		return pagamento;
+	}
+
+	public void setPagamento(Pagamento pagamento) {
+		this.pagamento = pagamento;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+	
+	
+	
 	
 
 }

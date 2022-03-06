@@ -3,12 +3,13 @@ package negocio;
 public class Telefone {
 	private int ddd;
 	private int numero;
-	
+	private Usuario idUsuario;
 	
 	// --------- Metodo construtor ----------
-	public Telefone(int d, int n) {
+	public Telefone(int d, int n, Usuario id) {
 		ddd = d;
 		numero = n;
+		idUsuario = id;
 	}
 	
 	//-------------- metodos ----------------
@@ -40,6 +41,14 @@ public class Telefone {
 
 	public void setNumero(int numero) {
 		this.numero = numero;
+	}
+
+	public Usuario getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Usuario idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 	
 	

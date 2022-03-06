@@ -7,14 +7,16 @@ public class Pagamento {
 	private int numeroCartao;
 	private int cvc;
 	private Date validade;
+	private Usuario idUsuario;
 	
 	
 	// -------------- Metodo construtor ----------
-	public Pagamento(String t, int nc, int cv, Date d) {
+	public Pagamento(String t, int nc, int cv, Date d, Usuario id) {
 		tipo = t;
 		numeroCartao = nc;
 		cvc = cv;
 		validade = d;
+		idUsuario = id;
 	}
 	
 	//----------------- metodos ------------------
@@ -59,6 +61,14 @@ public class Pagamento {
 
 	public void setValidade(Date validade) {
 		this.validade = validade;
+	}
+
+	public Usuario getIdUsuario() {
+		return idUsuario;
+	}
+
+	public void setIdUsuario(Usuario idUsuario) {
+		this.idUsuario = idUsuario;
 	}
 	
 	
