@@ -3,20 +3,18 @@ package negocio;
 import java.util.Date;
 
 public class Pagamento {
-	private String tipo;
 	private int numeroCartao;
 	private int cvc;
 	private Date validade;
-	private Usuario idUsuario;
+	//private Usuario idUsuario;
 	
 	
 	// -------------- Metodo construtor ----------
 	public Pagamento(String t, int nc, int cv, Date d, Usuario id) {
-		tipo = t;
 		numeroCartao = nc;
 		cvc = cv;
 		validade = d;
-		idUsuario = id;
+		//idUsuario = id;
 	}
 	
 	//----------------- metodos ------------------
@@ -31,13 +29,13 @@ public class Pagamento {
 	
 	
 	// ---------------gets e sets ---------------
-	public String getTipo() {
+	/*public String getTipo() {
 		return tipo;
 	}
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
+	}*/
 
 	public int getNumeroCartao() {
 		return numeroCartao;
@@ -63,13 +61,13 @@ public class Pagamento {
 		this.validade = validade;
 	}
 
-	public Usuario getIdUsuario() {
+	/*public Usuario getIdUsuario() {
 		return idUsuario;
 	}
 
 	public void setIdUsuario(Usuario idUsuario) {
 		this.idUsuario = idUsuario;
-	}
+	}*/
 	
 	
 }

@@ -190,7 +190,6 @@ public class Compra {
 	 public void setFotoProduto(Carrinho fotoProduto) {
 		this.fotoProduto = fotoProduto;
 	}
-
 	public Carrinho getNomeProduto() {
 		return nomeProduto;
 	}

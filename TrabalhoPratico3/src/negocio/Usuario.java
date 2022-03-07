@@ -17,17 +17,18 @@ public class Usuario {
 	//private Image fotoPerfil;
 	//private Image fotoCapa;
 	
+	 
 	// --------- Metodo construtor ----------
-	public Usuario(int id, Date dc, String n, String e, Date dn, int c, Telefone t, Pagamento p, Endereco end) {
-		idUsuario = id;
-		dataCadastramento = dc;
+	public Usuario(String n/*,int id, Date dc,  String e, Date dn, int c, Telefone t, Pagamento p, Endereco end*/) {
+		//idUsuario = id;
+		//dataCadastramento = dc;
 		nome = n;
-		email = e;
-		dataNascimento = dn;
-		cpf = c;
-		telefone = t;
-		pagamento = p;
-		endereco = end;
+		//email = e;
+		//dataNascimento = dn;
+		//cpf = c;
+		//telefone = t;
+		//pagamento = p;
+		//endereco = end;
 		
 	}
 
@@ -36,8 +37,8 @@ public class Usuario {
 			
 		}
 		
-		public void editarUsuario() {
-			
+		public void editarUsuario(String e) {
+			this.nome = e;
 		}
 		
 		public void buscarUsuario() {

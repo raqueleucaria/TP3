@@ -165,4 +165,3 @@ public class Vestido extends Produto{
 		this.idVendedor = idVendedor;
 	}
 }
-
