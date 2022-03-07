@@ -6,27 +6,37 @@ public abstract class Produto {
 	protected String nome;
 	protected int idProduto;
 	protected String marca;
-	protected String categoria;
-	protected String subcategoria;
 	protected double preco;
 	protected String condicao;
 	protected String departamento;
 	protected String descricao;
 	protected String cor;
 	protected String tamanho;
-	//protected Image fotoProduto[];
-	protected Usuario idCliente;
-	protected Usuario idVendedor;
+	protected byte[] fotoProduto;
+	//protected Usuario idCliente;
+	//protected Usuario idVendedor;
 	
 	// --------- Metodo construtor ----------
 	public Produto() {
-		super();
-	}
+        super();
+    }
 
+    public Produto(String nome, String marca, String condicao, String departamento, String descricao, String cor, String tamanho, int idProduto, double preco/*, byte[] foto*/) {
+        this.nome = nome;
+        this.marca = marca;
+        this.condicao = condicao;
+        this.departamento = departamento;
+        this.descricao = descricao;
+        this.cor = cor;
+        this.tamanho = tamanho;
+        this.idProduto = idProduto;
+        this.preco = preco;
+        //this.fotoProduto = foto;
+    }
+	
 	//-------------- metodos ----------------
 	
 	public void cadastrar() {
-		
 	}
 	
 	public void editar() {
@@ -70,21 +80,6 @@ public abstract class Produto {
 		this.marca = marca;
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
-	public String getSubcategoria() {
-		return subcategoria;
-	}
-
-	public void setSubcategoria(String subcategoria) {
-		this.subcategoria = subcategoria;
-	}
 
 	public double getPreco() {
 		return preco;
@@ -134,6 +129,7 @@ public abstract class Produto {
 		this.tamanho = tamanho;
 	}
 
+	/*
 	public Usuario getIdCliente() {
 		return idCliente;
 	}
@@ -149,6 +145,9 @@ public abstract class Produto {
 	public void setIdVendedor(Usuario idVendedor) {
 		this.idVendedor = idVendedor;
 	}
+	*/
+
+	
 	
 	
 	

@@ -8,12 +8,10 @@ public class Bijuteria extends Produto{
 	}
 	
 	// ---------------- Metodo construtor -------------
-	public Bijuteria (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam, Usuario idC, Usuario idV, String mod) {
+	public Bijuteria (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam,/* Usuario idC, Usuario idV,*/ String mod) {
 		nome = n;
 		idProduto = idP;
 		marca = m;
-		categoria = c;
-		subcategoria = sc;
 		preco = p;
 		condicao = cond;
 		departamento = dep;
@@ -21,8 +19,8 @@ public class Bijuteria extends Produto{
 		cor = co;
 		tamanho = tam;
 		//protected Image fotoProduto[];
-		idCliente = idC;
-		idVendedor = idV;
+		//idCliente = idC;
+		//idVendedor = idV;
 		
 		modeloBijuteria = mod;
 	}
@@ -85,21 +83,6 @@ public class Bijuteria extends Produto{
 		this.marca = marca;
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
-	public String getSubcategoria() {
-		return subcategoria;
-	}
-
-	public void setSubcategoria(String subcategoria) {
-		this.subcategoria = subcategoria;
-	}
 
 	public double getPreco() {
 		return preco;
@@ -149,6 +132,7 @@ public class Bijuteria extends Produto{
 		this.tamanho = tamanho;
 	}
 
+	/*
 	public Usuario getIdCliente() {
 		return idCliente;
 	}
@@ -164,4 +148,8 @@ public class Bijuteria extends Produto{
 	public void setIdVendedor(Usuario idVendedor) {
 		this.idVendedor = idVendedor;
 	}
+	*/
+
+	
+	
 }

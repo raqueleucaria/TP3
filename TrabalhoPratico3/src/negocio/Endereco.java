@@ -8,13 +8,21 @@ public class Endereco {
 	private Usuario idUsuario;
 	
 	// -------------- Metodo construtor -------------
-	public Endereco(int c, int l, String n, String comp, Usuario id) {
-		CEP = c;
-		lote = l;
-		nomeRuaAvenida = n;
-		complemento = comp;
-		idUsuario = id;
+	public Endereco(int cep, int lote, String nomeRua, String complemento) {
+		this.CEP = cep;
+		this.lote = lote;
+		this.nomeRuaAvenida = nomeRua;
+		this.complemento = complemento;
 	}
+	
+	@Override
+	public String toString() {
+		return "\n  CEP - "+ CEP +
+				"\n  Lote - " + lote +
+				"\n  Nome da rua/avenida - " + nomeRuaAvenida +
+				"\n  Complemento - " + complemento ;
+	}
+	
 	
 	//------------------- metodos ------------------
 

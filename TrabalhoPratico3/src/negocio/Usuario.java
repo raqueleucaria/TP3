@@ -5,11 +5,7 @@ import java.util.Date;
 
 public class Usuario {
 	private int idUsuario;
-	private Date dataCadastramento;
 	private String nome;
-	private String email;
-	private String senha;
-	private Date dataNascimento;
 	private int cpf;
 	private Telefone telefone;
 	private Pagamento pagamento;
@@ -17,37 +13,42 @@ public class Usuario {
 	//private Image fotoPerfil;
 	//private Image fotoCapa;
 	
-	 
 	// --------- Metodo construtor ----------
-	public Usuario(String n/*,int id, Date dc,  String e, Date dn, int c, Telefone t, Pagamento p, Endereco end*/) {
-		//idUsuario = id;
-		//dataCadastramento = dc;
-		nome = n;
-		//email = e;
-		//dataNascimento = dn;
-		//cpf = c;
-		//telefone = t;
-		//pagamento = p;
-		//endereco = end;
+	public Usuario(int idUsuario, String nome,int cpf, Telefone telefone, Pagamento pagamento, Endereco endereco) {
+		this.idUsuario = idUsuario;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		this.pagamento = pagamento;
+		this.endereco = endereco;
 		
 	}
-
+	
+	public String toString() {	
+		return "--------------Usuário--------------"+
+				"\nID Usuário: " + idUsuario +
+				"\nNome do aluno: " + nome +
+				"\nCPF: "+ cpf +
+				"\nTelefone: "+ telefone + 
+				"\nPagamento: " + pagamento +
+				"\nEndereço: "+ endereco;
+	}
+	
+	public int toStringID() {
+		return idUsuario;
+		
+	}
+	
 	//-------------- metodos ----------------
-		public void cadastrarUsuario() {
-			
+		public String cadastrarUsuario(String n){
+			return this.nome = n;
 		}
 		
 		public void editarUsuario(String e) {
 			this.nome = e;
 		}
 		
-		public void buscarUsuario() {
-			
-		}
 		
-		public void deletarUsuario() {
-			
-		}
 	
 	
 	// -----------gets e sets ------------
@@ -61,16 +62,6 @@ public class Usuario {
 	}
 
 
-	public Date getDataCadastramento() {
-		return dataCadastramento;
-	}
-
-
-	public void setDataCadastramento(Date dataCadastramento) {
-		this.dataCadastramento = dataCadastramento;
-	}
-
-
 	public String getNome() {
 		return nome;
 	}
@@ -80,25 +71,6 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-
-	public String getEmail() {
-		return email;
-	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-
-
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
 
 
 	public int getCpf() {
@@ -110,13 +82,6 @@ public class Usuario {
 		this.cpf = cpf;
 	}
 
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
 
 	public Telefone getTelefone() {
 		return telefone;
