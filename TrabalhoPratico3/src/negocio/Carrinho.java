@@ -15,11 +15,9 @@ public class Carrinho {
 	
 	//-------------- metodos ----------------
 	public void comprar() {
-	
 	}
 	
 	public void deletarItem() {
-		
 	}
 	
 	

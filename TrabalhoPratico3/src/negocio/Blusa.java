@@ -3,30 +3,39 @@ package negocio;
 public class Blusa extends Produto{
 	private String modeloBlusa;
 	
-	public Blusa() {
-		super();
+	// ---------------- Metodo construtor -------------
+	public Blusa (int idProduto,String nome,String marca, double preco, String departamento, String descricao, String cor, String tamanho/*, Usuario idCliente, Usuario idVendedor*/, String modeloBlusa) {
+		this.idProduto = idProduto;
+		this.nome = nome;
+		this.marca = marca;
+		this.preco = preco;
+		this.departamento = departamento;
+		this.descricao = descricao;
+		this.cor = cor;
+		this.tamanho = tamanho;
+		//this.idCliente = idCliente;
+		//this.idVendedor = idVendedor;
+		
+		this.modeloBlusa = modeloBlusa;
+		//protected Image fotoProduto[];
 	}
 	
-	// ---------------- Metodo construtor -------------
-	public Blusa (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam, Usuario idC, Usuario idV, String mod) {
-		nome = n;
-		idProduto = idP;
-		marca = m;
-		categoria = c;
-		subcategoria = sc;
-		preco = p;
-		condicao = cond;
-		departamento = dep;
-		descricao = des;
-		cor = co;
-		tamanho = tam;
-		//protected Image fotoProduto[];
-		idCliente = idC;
-		idVendedor = idV;
-		
-		modeloBlusa = mod;
-	}
+	@Override
+	public String toString() {
+		return 	" --------- Produto: BLUSA ------------" +
+				"\nID Produto: " + idProduto +
+				"\nNome do produto: " + nome +
+				"\nMarca: "+ marca +
+				"\nPreço: "+ preco + 
+				"\nDepartamento: " + departamento +
+				"\nDescrição: "+ descricao +
+				"\nCor: "+ cor + 
+				"\nTamanho: " + tamanho +
+				"\nModelo Blusa: "+ modeloBlusa;
 
+	}
+	
+	
 	//---------------Metodos--------------------------
 	
 	public void cadastrar() {
@@ -48,7 +57,6 @@ public class Blusa extends Produto{
 		
 	}
 	
-	
 	//---------------gets e sets---------------------
 	public String getModeloBlusa() {
 		return modeloBlusa;
@@ -61,6 +69,7 @@ public class Blusa extends Produto{
 	public String getNome() {
 		return nome;
 	}
+
 
 	public void setNome(String nome) {
 		this.nome = nome;
@@ -82,21 +91,6 @@ public class Blusa extends Produto{
 		this.marca = marca;
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
-	public String getSubcategoria() {
-		return subcategoria;
-	}
-
-	public void setSubcategoria(String subcategoria) {
-		this.subcategoria = subcategoria;
-	}
 
 	public double getPreco() {
 		return preco;
@@ -146,6 +140,7 @@ public class Blusa extends Produto{
 		this.tamanho = tamanho;
 	}
 
+	/*
 	public Usuario getIdCliente() {
 		return idCliente;
 	}
@@ -161,4 +156,10 @@ public class Blusa extends Produto{
 	public void setIdVendedor(Usuario idVendedor) {
 		this.idVendedor = idVendedor;
 	}
+	*/
+
 }
+	
+	
+
+	

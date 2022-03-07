@@ -5,16 +5,23 @@ import java.util.Date;
 public class Pagamento {
 	private int numeroCartao;
 	private int cvc;
-	private Date validade;
-	//private Usuario idUsuario;
+	private int validade;
+
 	
 	
 	// -------------- Metodo construtor ----------
-	public Pagamento(String t, int nc, int cv, Date d, Usuario id) {
-		numeroCartao = nc;
-		cvc = cv;
-		validade = d;
-		//idUsuario = id;
+	public Pagamento(int numeroCartao, int cvc, int validade) {
+		this.numeroCartao = numeroCartao;
+		this.cvc = cvc;
+		this.validade = validade;
+
+	}
+	
+	@Override
+	public String toString() {
+		return "\n  Número do Cartão -" + numeroCartao +
+				"\n  cvc - "+ cvc +
+				"\n  Validade - " + validade;
 	}
 	
 	//----------------- metodos ------------------
@@ -53,11 +60,11 @@ public class Pagamento {
 		this.cvc = cvc;
 	}
 
-	public Date getValidade() {
+	public int getValidade() {
 		return validade;
 	}
 
-	public void setValidade(Date validade) {
+	public void setValidade(int validade) {
 		this.validade = validade;
 	}
 
