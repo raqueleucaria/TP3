@@ -24,6 +24,7 @@ public class Usuario {
 		
 	}
 	
+
 	public String toString() {	
 		return "--------------Usuário--------------"+
 				"\nID Usuário: " + idUsuario +
@@ -52,11 +53,11 @@ public class Usuario {
 	
 	
 	// -----------gets e sets ------------
+
 	public int getIdUsuario() {
 		return idUsuario;
 	}
-
-
+	
 	public void setIdUsuario(int idUsuario) {
 		this.idUsuario = idUsuario;
 	}

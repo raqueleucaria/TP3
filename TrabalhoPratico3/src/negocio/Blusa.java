@@ -4,7 +4,7 @@ public class Blusa extends Produto{
 	private String modeloBlusa;
 	
 	// ---------------- Metodo construtor -------------
-	public Blusa (int idProduto,String nome,String marca, double preco, String departamento, String descricao, String cor, String tamanho/*, Usuario idCliente, Usuario idVendedor*/, String modeloBlusa) {
+	public Blusa (int idProduto,String nome,String marca, double preco, String departamento, String descricao, String cor, String tamanho,/*, byte[] foto*/ String modeloBlusa, Usuario usuario) {
 		this.idProduto = idProduto;
 		this.nome = nome;
 		this.marca = marca;
@@ -13,15 +13,17 @@ public class Blusa extends Produto{
 		this.descricao = descricao;
 		this.cor = cor;
 		this.tamanho = tamanho;
-		//this.idCliente = idCliente;
-		//this.idVendedor = idVendedor;
+		this.usuario = usuario;
 		
 		this.modeloBlusa = modeloBlusa;
 		//protected Image fotoProduto[];
+
 	}
 	
 	@Override
 	public String toString() {
+		int idVendedor = 0;
+		idVendedor += usuario.getIdUsuario();
 		return 	" --------- Produto: BLUSA ------------" +
 				"\nID Produto: " + idProduto +
 				"\nNome do produto: " + nome +
@@ -31,8 +33,14 @@ public class Blusa extends Produto{
 				"\nDescrição: "+ descricao +
 				"\nCor: "+ cor + 
 				"\nTamanho: " + tamanho +
-				"\nModelo Blusa: "+ modeloBlusa;
+				"\nModelo Blusa: "+ modeloBlusa+
+		
+				"\n\nID Vendedor: " + idVendedor;
 
+	}
+	
+	public double toStringPreco() {
+		return getPreco();
 	}
 	
 	
@@ -53,9 +61,6 @@ public class Blusa extends Produto{
 		
 	}
 	
-	public void adicionarItem() {
-		
-	}
 	
 	//---------------gets e sets---------------------
 	public String getModeloBlusa() {
@@ -140,23 +145,14 @@ public class Blusa extends Produto{
 		this.tamanho = tamanho;
 	}
 
-	/*
-	public Usuario getIdCliente() {
-		return idCliente;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCliente(Usuario idCliente) {
-		this.idCliente = idCliente;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
-
-	public Usuario getIdVendedor() {
-		return idVendedor;
-	}
-
-	public void setIdVendedor(Usuario idVendedor) {
-		this.idVendedor = idVendedor;
-	}
-	*/
+	
 
 }
 	
