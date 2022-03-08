@@ -5,7 +5,7 @@ public class Endereco {
 	private int lote;
 	private String nomeRuaAvenida;
 	private String complemento;
-	private Usuario idUsuario;
+	
 	
 	// -------------- Metodo construtor -------------
 	public Endereco(int cep, int lote, String nomeRua, String complemento) {
@@ -27,19 +27,14 @@ public class Endereco {
 	//------------------- metodos ------------------
 
 	public void cadastrarEnd() {
-		
 	}
 	
 	public void editarEnd() {
-		
 	}
 	
 	public void excluirEnd() {
-		
 	}
-	
-	
-	
+
 	// ---------------gets e sets ------------------
 	public int getCEP() {
 		return CEP;
@@ -72,15 +67,5 @@ public class Endereco {
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
-
-	public Usuario getIdUsuario() {
-		return idUsuario;
-	}
-
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
-	}
-	
-	
 	
 }

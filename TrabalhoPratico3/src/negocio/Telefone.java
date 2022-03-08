@@ -3,13 +3,11 @@ package negocio;
 public class Telefone {
 	private int ddd;
 	private int numero;
-	private Usuario idUsuario;
 	
 	// --------- Metodo construtor ----------
 	public Telefone(int ddd, int numero) {
 		this.ddd = ddd;
 		this.numero = numero;
-		
 	}
 	
 	@Override
@@ -19,15 +17,12 @@ public class Telefone {
 	
 	//-------------- metodos ----------------
 	public void cadastrarTel() {
-	
 	}
 	
 	public void editarTel() {
-		
 	}
 	
 	public void excluirTel() {
-		
 	}
 
 	
@@ -47,15 +42,6 @@ public class Telefone {
 	public void setNumero(int numero) {
 		this.numero = numero;
 	}
-
-	public Usuario getIdUsuario() {
-		return idUsuario;
-	}
-
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
-	}
-	
 	
 	
 }

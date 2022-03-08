@@ -7,14 +7,11 @@ public class Pagamento {
 	private int cvc;
 	private int validade;
 
-	
-	
 	// -------------- Metodo construtor ----------
 	public Pagamento(int numeroCartao, int cvc, int validade) {
 		this.numeroCartao = numeroCartao;
 		this.cvc = cvc;
 		this.validade = validade;
-
 	}
 	
 	@Override
@@ -26,23 +23,12 @@ public class Pagamento {
 	
 	//----------------- metodos ------------------
 	public void incluirPagamento() {
-	
 	}
 	
 	public void excluirPagamento() {
-		
 	}
 
 	
-	
-	// ---------------gets e sets ---------------
-	/*public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}*/
 
 	public int getNumeroCartao() {
 		return numeroCartao;
@@ -67,14 +53,6 @@ public class Pagamento {
 	public void setValidade(int validade) {
 		this.validade = validade;
 	}
-
-	/*public Usuario getIdUsuario() {
-		return idUsuario;
-	}
-
-	public void setIdUsuario(Usuario idUsuario) {
-		this.idUsuario = idUsuario;
-	}*/
 	
 	
 }

@@ -43,25 +43,20 @@ public class Bijuteria extends Produto{
 	}
 
 	//---------------Metodos--------------------------
-	
-	public void cadastrar() {
+	 public void cadastrar() {
+	 }
 		
-	}
+	 public void editar() {
+	 }
 	
-	public void editar() {
+	 public void filtrar() {
+	 }
+	
+	 public void deletar() {
+	 }
 		
-	}
-	public void filtrar() {
-		
-	}
-	
-	public void deletar() {
-		
-	}
-	
-	public void adicionarItem() {
-	}
-	
+	 public void adicionarItem() {
+	 }
 	
 	//---------------gets e sets---------------------
 	
@@ -106,14 +101,6 @@ public class Bijuteria extends Produto{
 
 	public void setPreco(double preco) {
 		this.preco = preco;
-	}
-
-	public String getCondicao() {
-		return condicao;
-	}
-
-	public void setCondicao(String condicao) {
-		this.condicao = condicao;
 	}
 
 	public String getDepartamento() {
