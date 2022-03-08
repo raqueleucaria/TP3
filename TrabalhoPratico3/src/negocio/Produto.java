@@ -13,15 +13,14 @@ public abstract class Produto {
 	protected String cor;
 	protected String tamanho;
 	protected byte[] fotoProduto;
-	//protected Usuario idCliente;
-	//protected Usuario idVendedor;
+	protected Usuario usuario;
 	
 	// --------- Metodo construtor ----------
 	public Produto() {
         super();
     }
 
-    public Produto(String nome, String marca, String condicao, String departamento, String descricao, String cor, String tamanho, int idProduto, double preco/*, byte[] foto*/) {
+    public Produto(String nome, String marca, String condicao, String departamento, String descricao, String cor, String tamanho, int idProduto, double preco/*, byte[] foto*/, Usuario usuario) {
         this.nome = nome;
         this.marca = marca;
         this.condicao = condicao;
@@ -32,6 +31,7 @@ public abstract class Produto {
         this.idProduto = idProduto;
         this.preco = preco;
         //this.fotoProduto = foto;
+        this.usuario = usuario;
     }
 	
 	//-------------- metodos ----------------
@@ -53,7 +53,6 @@ public abstract class Produto {
 	public void adicionarItem() {
 		
 	}
-	
 	
 	// --------------gets e sets ------------
 	public String getNome() {
@@ -129,23 +128,15 @@ public abstract class Produto {
 		this.tamanho = tamanho;
 	}
 
-	/*
-	public Usuario getIdCliente() {
-		return idCliente;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCliente(Usuario idCliente) {
-		this.idCliente = idCliente;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
-	public Usuario getIdVendedor() {
-		return idVendedor;
-	}
 
-	public void setIdVendedor(Usuario idVendedor) {
-		this.idVendedor = idVendedor;
-	}
-	*/
 
 	
 	

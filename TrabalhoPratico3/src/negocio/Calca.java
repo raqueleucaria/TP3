@@ -8,21 +8,38 @@ public class Calca extends Produto{
 	}
 	
 	// ---------------- Metodo construtor -------------
-	public Calca (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam /*, Usuario idC, Usuario idV*/, String mod) {
-		nome = n;
-		idProduto = idP;
-		marca = m;
-		preco = p;
-		condicao = cond;
-		departamento = dep;
-		descricao = des;
-		cor = co;
-		tamanho = tam;
-		//protected Image fotoProduto[];
-		//idCliente = idC;
-		//idVendedor = idV;
+	public Calca (int idProduto,String nome,String marca, double preco, String departamento, String descricao, String cor, String tamanho/*, byte[] foto*/, String modeloCalca, Usuario usuario) {
+		this.idProduto = idProduto;
+		this.nome = nome;
+		this.marca = marca;
+		this.preco = preco;
+		this.departamento = departamento;
+		this.descricao = descricao;
+		this.cor = cor;
+		this.tamanho = tamanho;
+		this.usuario = usuario;
 		
-		modeloCalca = mod;
+		this.modeloCalca = modeloCalca;
+		//protected Image fotoProduto[];
+	}
+	
+	@Override
+	public String toString() {
+		int idVendedor = 0;
+		idVendedor += usuario.getIdUsuario();
+		return 	" --------- Produto: CALÇA ------------" +
+				"\nID Produto: " + idProduto +
+				"\nNome do produto: " + nome +
+				"\nMarca: "+ marca +
+				"\nPreço: "+ preco + 
+				"\nDepartamento: " + departamento +
+				"\nDescrição: "+ descricao +
+				"\nCor: "+ cor + 
+				"\nTamanho: " + tamanho +
+				"\nModelo Calça: "+ modeloCalca +
+		
+				"\n\nID Vendedor: " + idVendedor;
+
 	}
 
 	//---------------Metodos--------------------------
@@ -43,7 +60,7 @@ public class Calca extends Produto{
 	}
 	
 	public void adicionarItem() {
-		
+
 	}
 	
 	
@@ -132,21 +149,12 @@ public class Calca extends Produto{
 		this.tamanho = tamanho;
 	}
 
-	/*
-	public Usuario getIdCliente() {
-		return idCliente;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCliente(Usuario idCliente) {
-		this.idCliente = idCliente;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
-
-	public Usuario getIdVendedor() {
-		return idVendedor;
-	}
-
-	public void setIdVendedor(Usuario idVendedor) {
-		this.idVendedor = idVendedor;
-	}
-	*/
+	
 }

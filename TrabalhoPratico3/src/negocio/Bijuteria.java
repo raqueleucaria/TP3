@@ -8,21 +8,38 @@ public class Bijuteria extends Produto{
 	}
 	
 	// ---------------- Metodo construtor -------------
-	public Bijuteria (String n, int idP, String m, String c, String sc, double p, String cond, String dep, String des, String co, String tam,/* Usuario idC, Usuario idV,*/ String mod) {
-		nome = n;
-		idProduto = idP;
-		marca = m;
-		preco = p;
-		condicao = cond;
-		departamento = dep;
-		descricao = des;
-		cor = co;
-		tamanho = tam;
-		//protected Image fotoProduto[];
-		//idCliente = idC;
-		//idVendedor = idV;
+	public Bijuteria (int idProduto,String nome,String marca, double preco, String departamento, String descricao, String cor, String tamanho/*, byte[] foto*/, String modeloBijuteria, Usuario usuario) {
+		this.idProduto = idProduto;
+		this.nome = nome;
+		this.marca = marca;
+		this.preco = preco;
+		this.departamento = departamento;
+		this.descricao = descricao;
+		this.cor = cor;
+		this.tamanho = tamanho;
+		this.usuario = usuario;
 		
-		modeloBijuteria = mod;
+		this.modeloBijuteria = modeloBijuteria;
+		//protected Image fotoProduto[];
+	}
+	
+	@Override
+	public String toString() {
+		int idVendedor = 0;
+		idVendedor += usuario.getIdUsuario();
+		return 	" --------- Produto: BIJUTERIA ------------" +
+				"\nID Produto: " + idProduto +
+				"\nNome do produto: " + nome +
+				"\nMarca: "+ marca +
+				"\nPreço: "+ preco + 
+				"\nDepartamento: " + departamento +
+				"\nDescrição: "+ descricao +
+				"\nCor: "+ cor + 
+				"\nTamanho: " + tamanho +
+				"\nModelo Bijuteria: "+ modeloBijuteria +
+	
+				"\n\nID Vendedor: " + idVendedor;
+
 	}
 
 	//---------------Metodos--------------------------
@@ -43,7 +60,6 @@ public class Bijuteria extends Produto{
 	}
 	
 	public void adicionarItem() {
-		
 	}
 	
 	
@@ -132,23 +148,14 @@ public class Bijuteria extends Produto{
 		this.tamanho = tamanho;
 	}
 
-	/*
-	public Usuario getIdCliente() {
-		return idCliente;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 
-	public void setIdCliente(Usuario idCliente) {
-		this.idCliente = idCliente;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
-	public Usuario getIdVendedor() {
-		return idVendedor;
-	}
-
-	public void setIdVendedor(Usuario idVendedor) {
-		this.idVendedor = idVendedor;
-	}
-	*/
 
 	
 	

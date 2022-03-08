@@ -16,29 +16,46 @@ public class Teste {
 		Telefone t2 = new Telefone(61,988);
 		Usuario u2 = new Usuario(2,"Vera",0531,t2,p2,e2);
 		
-		System.out.println(u1.toString());
-		System.out.println();
-		System.out.println(u2.toString());
+		System.out.println(u1.toString()+"\n");
+		//System.out.println(u1.toStringID()+"\n"); //mostrar o idVendedor
 		
-	//cadastrandoProduto
-		//------ BLUSA
+		
+		//System.out.println(u2.toString()+"\n");
+		
+	
+	/* CADASTRAMENTO PRODUTO
+	 * idProduto, nome, marca
+	 * preço, departamento, descrição
+	 * cor, tamanho, modelo, idVendedor
+	*/
 
-		Blusa b1 = new Blusa(1,
-							"Cropped pra reagir", 
-							"Renner", 
-							29, 
-							"feminino", 
-							"Leve e confortavel", 
-							"Preto", 
-							"M",
-							"Cropped");
-		System.out.println(b1.toString());
+		
+		Blusa b1 = new Blusa(1, "Cropped pra reagir", "Renner", 
+							29, "feminino", "Leve e confortavel", 
+							"Preto", "M", "Cropped", u1);
 		
 		
+		System.out.println(b1.toString()+"\n");
+		//System.out.println(b1.getIdVendedor()); //mostrar o idVendedor
 		
-	//adicionandoItem
+		Calca c1 = new Calca(2, "Jeans básico", "C&a", 
+							44.9, "masculino", "Para usar no cotidiano", 
+							"Azul", "42","Jeans",u1);
+		//System.out.println(c1.toString()+"\n");
 		
-	//comprando
+		
+		Bijuteria bj1 = new Bijuteria(2,"Gargantilha gótica", "Romanel", 
+									20.5, "Feminino", "Gargantilha estilo anos 90, bem gótica suave", 
+									"Preto", "U","Colar",u1);
+		//System.out.println(bj1.toString()+"\n");
+		
+	
+	//ADICIONANDO PRODUTO AO CARRINHO
+		
+		Carrinho cr1 = new Carrinho(b1,c1,bj1);
+		System.out.println(cr1.toString()+"\n");
+		
+	//REALIZANDO COMPRA
 	}
 
 	
