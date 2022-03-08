@@ -17,7 +17,6 @@ public class Blusa extends Produto{
 		
 		this.modeloBlusa = modeloBlusa;
 		//protected Image fotoProduto[];
-
 	}
 	
 	@Override
