@@ -16,44 +16,94 @@ public class Carrinho {
 	}
 	
 	public String toString() {
-		String resumo = "";
-		double valor = 0;
-		if (blusa!= null) {
-			valor += blusa.preco;
-			resumo += "\nBlusa\nNome: "+blusa.nome+"\n1x "+blusa.preco+ "\ntam: "+blusa.tamanho+"\n";
-		}
-		if (calca!= null) {
-			valor += calca.preco;
-			resumo += "\nCalça\nNome: "+calca.nome+"\n1x "+calca.preco+ "\ntam: "+calca.tamanho+"\n";
-		} 
-		if (bijuteria!= null) {
-			valor += bijuteria.preco;
-			resumo += "\nBijuteria\nNome: "+bijuteria.nome+"\n1x "+bijuteria.preco+ "\ntam: "+bijuteria.tamanho+"\n";
-		}
-		
-		valorTotal = valor + frete;
-		
 		return 	" --------- Carrinho ------------" +
-				resumo +
-				"\nPreço do(s) produto(s): "+ valor +
+				resumirProdutos() +
+				"\nPreço do(s) produto(s): "+ somarValores() +
 				"\nFrete: R$ 30 reais"+
-				"\n\n\tValor total: " + valorTotal; 
+				"\n\n    Valor total: " + getValorTotal(); 
 				
 	}
 	
-	
-	
+
 	//-------------- metodos ----------------
-	public void comprar() {
+	public String resumirProdutos() {
+		String resumo = "";
+		if (blusa!= null) {
+			resumo += "\nBlusa\nNome: "+blusa.nome+"\n1x "+blusa.preco+ "\ntam: "+blusa.tamanho+"\n";
+		}
+		if (calca!= null) {
+			resumo += "\nCalça\nNome: "+calca.nome+"\n1x "+calca.preco+ "\ntam: "+calca.tamanho+"\n";
+		} 
+		if (bijuteria!= null) {
+			resumo += "\nBijuteria\nNome: "+bijuteria.nome+"\n1x "+bijuteria.preco+ "\ntam: "+bijuteria.tamanho+"\n";
+		}
+		return resumo;
+	}
+	
+	public double somarValores() {
+		double valor = 0;
+		valor += blusa.preco;
+		valor += calca.preco;
+		valor += bijuteria.preco;
+		return valor;
+	}
+	
+	public String datarVendedor() {
+		int id = blusa.usuario.getIdUsuario();
+		String nome = blusa.usuario.getNome();
+		return id + " - " + nome;
 	}
 	
 	public void deletarItem() {
 	}
 	
 	
+
+	
+	
 	// -----------gets e sets ------------
 	
+	
 
+	public double getFrete() {
+		return frete;
+	}
+
+	public void setFrete(double frete) {
+		this.frete = frete;
+	}
+
+	public double getValorTotal() {
+		return valorTotal = somarValores() + frete;
+	}
+
+	public void setValorTotal(double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
+
+	public Blusa getBlusa() {
+		return blusa;
+	}
+
+	public void setBlusa(Blusa blusa) {
+		this.blusa = blusa;
+	}
+
+	public Calca getCalca() {
+		return calca;
+	}
+
+	public void setCalca(Calca calca) {
+		this.calca = calca;
+	}
+
+	public Bijuteria getBijuteria() {
+		return bijuteria;
+	}
+
+	public void setBijuteria(Bijuteria bijuteria) {
+		this.bijuteria = bijuteria;
+	}
 	
 
 

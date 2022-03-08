@@ -3,198 +3,94 @@ package negocio;
 import java.util.Date;
 
 public class Compra {
-	private Date dataCompra;
+	private int dataCompra; //Mudar para Date depois
 	private String statusCompra;
 	private int numeroPedido;
 	
-	private Usuario idCliente;
-	private Usuario idVendedor;
-	private Usuario pagamento;
-	private Usuario endVendedor;
-	private Usuario endCliente;
-	
-	private Carrinho cupom;
-	private Carrinho valorTotal;
-	private Carrinho desconto;
-	private Carrinho frete;
-	private Carrinho tamProduto;
-	private Carrinho fotoProduto;
-	private Carrinho nomeProduto;
-	private Carrinho valorProduto;
-	//private Produto fotoProduto[];
+	private Usuario usuario;
+	private Carrinho carrinho;
+
 	
 
-	public Compra(Date dc, String s, int np, Usuario idC, Usuario idV, Usuario pg, Usuario endC, Usuario endV, Carrinho cup, Carrinho vt, Carrinho desc, Carrinho f, Carrinho tam, Carrinho ft, Carrinho nome, Carrinho vp) {
-		dataCompra = dc;
-		statusCompra = s;
-		numeroPedido = np;
-		
-		idCliente = idC;
-		idVendedor = idV;
-		pagamento = pg;
-		endCliente = endC;
-		endVendedor = endV;
-		
-		
-		cupom = cup;
-		valorTotal = vt;
-		desconto = desc;
-		frete = f;
-		tamProduto = tam;
-		//fotoProduto = ft;
-		nomeProduto = nome;
-		valorProduto = vp;
-		
-		
+	public Compra(int dataCompra, String statusCompra, int numeroPedido,Usuario usuario, Carrinho carrinho) {
+		this.dataCompra = dataCompra;
+		this.statusCompra = statusCompra;
+		this.numeroPedido = numeroPedido;
+		this.usuario = usuario;
+		this.carrinho = carrinho;
+	
 	}
+	
+	public String toString() {
+		return 	" ------------ Compra ------------------" +
+				"\nNúmero Pedido: " + numeroPedido + 
+				"\n\nData da Compra: " + dataCompra +
+				"\nStatus: " + statusCompra +
+				
+				"\n\nVendedor: " + carrinho.datarVendedor() +
+				"\nCliente: " + usuario.getIdUsuario() + " - " + usuario.getNome() + "\n\n" +
+				
+				carrinho.resumirProdutos() +
+				"\nPreço do(s) produto(s): "+ carrinho.somarValores() +
+				"\nFrete: R$ 30 reais"+
+				"\n\n    Valor total: " + carrinho.getValorTotal(); 
+				
+	}
+				
+	
 	
 	//------------------------ metodos -----------------------
 	public void confirmar() {
-	
 	}
 	
 	public void cancelar() {
-		
 	}
 	
 	public void editarEndereco() {
-		
 	}
+	
 
 	
 	// -------------------gets e sets -----------------------
-	
-	public Date getDataCompra() {
+	public int getDataCompra() {
 		return dataCompra;
 	}
-
-	public void setDataCompra(Date dataCompra) {
+	
+	public void setDataCompra(int dataCompra) {
 		this.dataCompra = dataCompra;
 	}
-
+	
 	public String getStatusCompra() {
 		return statusCompra;
 	}
-
+	
 	public void setStatusCompra(String statusCompra) {
 		this.statusCompra = statusCompra;
 	}
-
+	
 	public int getNumeroPedido() {
 		return numeroPedido;
 	}
-
+	
 	public void setNumeroPedido(int numeroPedido) {
 		this.numeroPedido = numeroPedido;
 	}
-
-	public Usuario getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(Usuario idCliente) {
-		this.idCliente = idCliente;
-	}
-
-	public Usuario getIdVendedor() {
-		return idVendedor;
-	}
-
-	public void setIdVendedor(Usuario idVendedor) {
-		this.idVendedor = idVendedor;
-	}
-
-	public Usuario getPagamento() {
-		return pagamento;
-	}
-
-	public void setPagamento(Usuario pagamento) {
-		this.pagamento = pagamento;
-	}
-
-	public Usuario getEndVendedor() {
-		return endVendedor;
-	}
-
-	public void setEndVendedor(Usuario endVendedor) {
-		this.endVendedor = endVendedor;
-	}
-
-	public Usuario getEndCliente() {
-		return endCliente;
-	}
-
-	public void setEndCliente(Usuario endCliente) {
-		this.endCliente = endCliente;
-	}
-
-	public Carrinho getCupom() {
-		return cupom;
-	}
-
-	public void setCupom(Carrinho cupom) {
-		this.cupom = cupom;
-	}
-
-	public Carrinho getValorTotal() {
-		return valorTotal;
-	}
-
-	public void setValorTotal(Carrinho valorTotal) {
-		this.valorTotal = valorTotal;
-	}
-
-	public Carrinho getDesconto() {
-		return desconto;
-	}
-
-	public void setDesconto(Carrinho desconto) {
-		this.desconto = desconto;
-	}
-
-	public Carrinho getFrete() {
-		return frete;
-	}
-
-	public void setFrete(Carrinho frete) {
-		this.frete = frete;
-	}
-
-	public Carrinho getTamProduto() {
-		return tamProduto;
-	}
-
-	public void setTamProduto(Carrinho tamProduto) {
-		this.tamProduto = tamProduto;
-	}
-
-	public Carrinho getFotoProduto() {
-		return fotoProduto;
-	}
-
 	
-	public void setNomeProduto(Carrinho nomeProduto) {
-		this.nomeProduto = nomeProduto;
-	}
-
-	public Carrinho getValorProduto() {
-		return valorProduto;
-	}
-
-	public void setValorProduto(Carrinho valorProduto) {
-		this.valorProduto = valorProduto;
+	public Usuario getUsuario() {
+		return usuario;
 	}
 	
-	/*
-	 
-	 public void setFotoProduto(Carrinho fotoProduto) {
-		this.fotoProduto = fotoProduto;
-	}
-	public Carrinho getNomeProduto() {
-		return nomeProduto;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
+	public Carrinho getCarrinho() {
+		return carrinho;
+	}
 	
-   */
+	public void setCarrinho(Carrinho carrinho) {
+		this.carrinho = carrinho;
+	}
+	
 	
 }
