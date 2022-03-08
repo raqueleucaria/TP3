@@ -27,17 +27,17 @@ public class Calca extends Produto{
 	public String toString() {
 		int idVendedor = 0;
 		idVendedor += usuario.getIdUsuario();
-		return 	" --------- Produto: CALÇA ------------" +
+		return " --------- Produto: CALA ------------" +
 				"\nID Produto: " + idProduto +
 				"\nNome do produto: " + nome +
-				"\nMarca: "+ marca +
-				"\nPreço: "+ preco + 
+				"\nMarca: " + marca +
+				"\nPreço: " + preco +
 				"\nDepartamento: " + departamento +
-				"\nDescrição: "+ descricao +
-				"\nCor: "+ cor + 
+				"\nDescrição: " + descricao +
+				"\nCor: " + cor +
 				"\nTamanho: " + tamanho +
-				"\nModelo Calça: "+ modeloCalca +
-		
+				"\nModelo Calça: " + modeloCalca +
+
 				"\n\nID Vendedor: " + idVendedor;
 
 	}

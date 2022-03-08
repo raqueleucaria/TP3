@@ -1,7 +1,5 @@
 package negocio;
 
-import java.util.Date;
-
 public class Pagamento {
 	private int numeroCartao;
 	private int cvc;
@@ -13,22 +11,20 @@ public class Pagamento {
 		this.cvc = cvc;
 		this.validade = validade;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "\n  Número do Cartão - " + numeroCartao +
-				"\n  cvc - "+ cvc +
+				"\n  cvc - " + cvc +
 				"\n  Validade - " + validade;
 	}
-	
+
 	//----------------- metodos ------------------
 	public void incluirPagamento() {
 	}
-	
+
 	public void excluirPagamento() {
 	}
-
-	
 
 	public int getNumeroCartao() {
 		return numeroCartao;
