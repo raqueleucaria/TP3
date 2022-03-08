@@ -17,7 +17,6 @@ public class Blusa extends Produto{
 		
 		this.modeloBlusa = modeloBlusa;
 		//protected Image fotoProduto[];
-
 	}
 	
 	@Override
@@ -39,28 +38,21 @@ public class Blusa extends Produto{
 
 	}
 	
-	public double toStringPreco() {
-		return getPreco();
-	}
-	
-	
 	//---------------Metodos--------------------------
-	
-	public void cadastrar() {
+	 public void cadastrar() {	
+	 }
 		
-	}
+	 public void editar() {
+	 }
 	
-	public void editar() {
+	 public void filtrar() {
+	 }
 		
-	}
-	public void filtrar() {
-		
-	}
+	 public void deletar() {
+	 }
 	
-	public void deletar() {
-		
-	}
-	
+	 public void adicionarItem() {
+	 }
 	
 	//---------------gets e sets---------------------
 	public String getModeloBlusa() {
@@ -105,13 +97,6 @@ public class Blusa extends Produto{
 		this.preco = preco;
 	}
 
-	public String getCondicao() {
-		return condicao;
-	}
-
-	public void setCondicao(String condicao) {
-		this.condicao = condicao;
-	}
 
 	public String getDepartamento() {
 		return departamento;

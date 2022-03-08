@@ -33,12 +33,9 @@ public class Compra {
 				carrinho.resumirProdutos() +
 				"\nPreço do(s) produto(s): "+ carrinho.somarValores() +
 				"\nFrete: R$ 30 reais"+
-				"\n\n    Valor total: " + carrinho.getValorTotal(); 
-				
+				"\n\n    Valor total: " + carrinho.getValorTotal(); 	
 	}
 				
-	
-	
 	//------------------------ metodos -----------------------
 	public void confirmar() {
 	}

@@ -10,21 +10,20 @@ public class Usuario {
 	private Telefone telefone;
 	private Pagamento pagamento;
 	private Endereco endereco;
-	//private Image fotoPerfil;
-	//private Image fotoCapa;
+	//private byte[] fotoPerfil;
+
 	
 	// --------- Metodo construtor ----------
-	public Usuario(int idUsuario, String nome,int cpf, Telefone telefone, Pagamento pagamento, Endereco endereco) {
+	public Usuario(int idUsuario, String nome,int cpf, Telefone telefone, Pagamento pagamento, Endereco endereco/*, byte[] fotoPerfil*/) {
 		this.idUsuario = idUsuario;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.telefone = telefone;
 		this.pagamento = pagamento;
 		this.endereco = endereco;
-		
+		//this.fotoPerfil = fotoPerfil;
 	}
 	
-
 	public String toString() {	
 		return "--------------Usuário--------------"+
 				"\nID Usuário: " + idUsuario +
@@ -37,21 +36,25 @@ public class Usuario {
 	
 	public int toStringID() {
 		return idUsuario;
-		
 	}
 	
 	//-------------- metodos ----------------
-		public String cadastrarUsuario(String n){
-			return this.nome = n;
-		}
+	public String cadastrarUsuario(String n){
+		return this.nome = n;
+	}
 		
-		public void editarUsuario(String e) {
-			this.nome = e;
-		}
+	public void editarUsuario(String e) {
+		this.nome = e;
+	}
+	public void buscarUsuario() {
+		
+	}
+	public void excluirUsuario() {
+		
+	}
 		
 		
-	
-	
+		
 	// -----------gets e sets ------------
 
 	public int getIdUsuario() {
@@ -62,27 +65,21 @@ public class Usuario {
 		this.idUsuario = idUsuario;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
-
 
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
-
 	public int getCpf() {
 		return cpf;
 	}
 
-
 	public void setCpf(int cpf) {
 		this.cpf = cpf;
 	}
-
 
 	public Telefone getTelefone() {
 		return telefone;

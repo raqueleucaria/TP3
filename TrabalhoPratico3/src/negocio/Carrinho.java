@@ -20,12 +20,10 @@ public class Carrinho {
 				resumirProdutos() +
 				"\nPreço do(s) produto(s): "+ somarValores() +
 				"\nFrete: R$ 30 reais"+
-				"\n\n    Valor total: " + getValorTotal(); 
-				
+				"\n\n    Valor total: " + getValorTotal(); 	
 	}
 	
-
-	//-------------- metodos ----------------
+	//------------------ metodos ----------------
 	public String resumirProdutos() {
 		String resumo = "";
 		if (blusa!= null) {
@@ -54,12 +52,15 @@ public class Carrinho {
 		return id + " - " + nome;
 	}
 	
+	public void comprar() {
+	}
+	
 	public void deletarItem() {
 	}
 	
 	
-
 	
+
 	
 	// -----------gets e sets ------------
 	

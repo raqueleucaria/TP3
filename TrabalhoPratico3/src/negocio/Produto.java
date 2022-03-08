@@ -7,12 +7,11 @@ public abstract class Produto {
 	protected int idProduto;
 	protected String marca;
 	protected double preco;
-	protected String condicao;
 	protected String departamento;
 	protected String descricao;
 	protected String cor;
 	protected String tamanho;
-	protected byte[] fotoProduto;
+	//protected byte[] fotoProduto;
 	protected Usuario usuario;
 	
 	// --------- Metodo construtor ----------
@@ -20,23 +19,22 @@ public abstract class Produto {
         super();
     }
 
-    public Produto(String nome, String marca, String condicao, String departamento, String descricao, String cor, String tamanho, int idProduto, double preco/*, byte[] foto*/, Usuario usuario) {
+    public Produto(String nome, String marca, String departamento, String descricao, String cor, String tamanho, int idProduto, double preco/*, byte[] fotoProduto*/, Usuario usuario) {
         this.nome = nome;
         this.marca = marca;
-        this.condicao = condicao;
         this.departamento = departamento;
         this.descricao = descricao;
         this.cor = cor;
         this.tamanho = tamanho;
         this.idProduto = idProduto;
         this.preco = preco;
-        //this.fotoProduto = foto;
+    
         this.usuario = usuario;
+      //this.fotoProduto = fotoProduto;
     }
 	
 	//-------------- metodos ----------------
-	
-	public void cadastrar() {
+    public void cadastrar() {
 	}
 	
 	public void editar() {
@@ -88,14 +86,6 @@ public abstract class Produto {
 		this.preco = preco;
 	}
 
-	public String getCondicao() {
-		return condicao;
-	}
-
-	public void setCondicao(String condicao) {
-		this.condicao = condicao;
-	}
-
 	public String getDepartamento() {
 		return departamento;
 	}
@@ -136,10 +126,4 @@ public abstract class Produto {
 		this.usuario = usuario;
 	}
 
-
-
-	
-	
-	
-	
 }
