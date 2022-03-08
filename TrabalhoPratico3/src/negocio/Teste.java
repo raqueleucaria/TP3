@@ -53,7 +53,12 @@ public class Teste {
 	//ADICIONANDO PRODUTO AO CARRINHO
 		
 		Carrinho cr1 = new Carrinho(b1,c1,bj1);
+		
+		//System.out.println(cr1.valorProdutos()+"\n");
 		System.out.println(cr1.toString()+"\n");
+		
+		Compra compra1 = new Compra (23, "Esperando pagamento", 001, u2, cr1);
+		System.out.println(compra1.toString()+"\n");
 		
 	//REALIZANDO COMPRA
 	}
